@@ -5,6 +5,10 @@ from flask import request, jsonify
 from config import db,app
 from models import Contact
 
+@app.route("/")
+def sayHello():
+    return "hello from api this was edited in version1" 
+
 @app.route("/contacts" , methods=["GET"]) #meka awilla decorator ekak. 
 def get_contacts():
     contacts = Contact.query.all()
@@ -44,7 +48,7 @@ def update_contact(user_id):
     if not contact:
         return jsonify({"message": "User not found" }), 404
     
-    data =request.json
+    data = request.json
     contact.first_name = data.get("firstName", contact.first_name)#meken krnne firstName ekat agayak nattnm eta passe deela thiyna aruguement eke value eka adalal vaiable ekat asign knwa 
     contact.last_name = data.get("lastName", contact.last_name)
     contact.email = data.get("email" , contact.email)
@@ -69,5 +73,6 @@ if __name__ == "__main__":
     with app.app_context():
         db.create_all()
 
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5001)
 
+    

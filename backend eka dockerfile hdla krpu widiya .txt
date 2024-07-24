@@ -1,0 +1,14 @@
+step 1: mulinma main.py ekn hnna one onema network interface ekkin access krna puluwan wenna hdnna one mann mehma
+
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+
+    app.run(debug=True, host='0.0.0.0', port=5000)
+
+meken passe onema network interface ekkt access krnna puluwan , meka kale nattnm docker image eka hdla container ek hdla run krhama run wenne nha
+
+step 2 : image ek hdnwa : docker build --no-cache -t flask-backend:latest .
+
+step 3 : container eka hdla run krnwa : docker run --name flask-backend -d -p 5000:5000 flask-backend:latest 
+

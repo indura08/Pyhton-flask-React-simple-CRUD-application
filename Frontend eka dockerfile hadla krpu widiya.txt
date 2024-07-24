@@ -1,0 +1,7 @@
+step 1: mulinma react project eke package.json file eke script gode dev attribute eke thiynne vite kiyla withri , eka vite --host 0.0.0.0 kiyl add krnna one   
+
+step 2: mulinma image k hduwa : docker build --no-cache -t react app
+
+step 3: container eka hduwa : docker run --name react-app -d -p 5173:5173
+
+//heta wena wena ports walt daala blnna mei backend eki dekm

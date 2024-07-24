@@ -1,0 +1,14 @@
+FROM python:3.11-alpine
+
+WORKDIR /app
+
+# EXPOSE 5000
+
+RUN pip install Flask Flask-SQLAlchemy flask-cors
+
+#mekn thami attatama ape me thiyna codes arawa mewa okkoma docker contianer kee app directory ekt watenne
+ADD . . 
+
+EXPOSE 5000
+
+CMD [ "python" , "main.py" ]
