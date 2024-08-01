@@ -16,6 +16,6 @@ spec:
     spec: 
       containers:
         - name: react-frontnend
-          image: indura08/flask-react-application:react-frontend
+          image: indura08/flask-react-application:react-frontend-k8sv1
           ports:
             - containerPort: 5173

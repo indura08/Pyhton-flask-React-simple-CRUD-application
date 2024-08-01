@@ -12,3 +12,4 @@ spec:
   type: ClusterIP   #danata cluster ip demu within cluster withrk access krnna puluwan wenna 
     
     #meke error ekk enwa , flask-backend-service:5000 kiyla daanna one react eke fetch api walt e rror eka heta hdnna
+    
